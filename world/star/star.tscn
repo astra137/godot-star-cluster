@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3uj0rp2fgklx"]
+
+[ext_resource type="Script" path="res://world/star/star.gd" id="1_eqpl6"]
+[ext_resource type="PackedScene" uid="uid://db7el8b1okove" path="res://world/star/star.glb" id="2_omrpg"]
+[ext_resource type="Material" uid="uid://cshj0ghtouw4t" path="res://world/star/star.material" id="3_oft7f"]
+
+[node name="star" type="Node3D"]
+script = ExtResource("1_eqpl6")
+
+[node name="star" parent="." instance=ExtResource("2_omrpg")]
+
+[node name="Sphere" parent="star" index="0"]
+instance_shader_parameters/color = Color(1, 0.874543, 0.813485, 0.896767)
+instance_shader_parameters/data = Color(1, 1, 5740, 1)
+surface_material_override/0 = ExtResource("3_oft7f")
+
+[editable path="star"]

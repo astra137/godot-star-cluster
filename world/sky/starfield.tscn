@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdnjwyrt0epwt"]
+
+[ext_resource type="Script" path="res://world/sky/starfield.gd" id="1_rju73"]
+[ext_resource type="Resource" uid="uid://88pvpbrwx27u" path="res://world/sky/starbuffer.tres" id="2_60be1"]
+[ext_resource type="MultiMesh" uid="uid://dg3xeqsbfefej" path="res://world/sky/starfield.multimesh" id="2_c0d2s"]
+
+[sub_resource type="Environment" id="Environment_nhryr"]
+glow_enabled = true
+glow_levels/1 = 0.4
+glow_levels/2 = 0.3
+glow_levels/3 = 0.2
+glow_levels/4 = 0.1
+glow_levels/5 = 0.0
+glow_bloom = 1.0
+glow_blend_mode = 1
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0
+volumetric_fog_length = 4096.0
+
+[node name="starfield" type="Node3D"]
+script = ExtResource("1_rju73")
+star_count = 100000
+star_buffer = ExtResource("2_60be1")
+imported_hash = 1422089644
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nhryr")
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="."]
+multimesh = ExtResource("2_c0d2s")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+fov = 70.0
+near = 0.01

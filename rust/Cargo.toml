@@ -1,0 +1,18 @@
+[package]
+name = "cosmic-ext"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+fixed = "1.23"
+rstar = "0.12"
+kdtree = "0.7"
+bytemuck = "1.13"
+
+[dependencies.godot]
+git = "https://github.com/godot-rust/gdext"
+branch = "master"
