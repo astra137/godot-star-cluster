@@ -23,8 +23,23 @@ be another render layer like the starfield. It could also be system of scaling,
 billboarded sprites that render just inside of the primary camera's far plane
 (which is similar to how stars currently work in this demo).
 
+## Building
+
+This will only work on Windows. Add more platforms in rust.gdextension. Build the Rust library first before opening the project in Godot.
+
+## Controls
+
+Press 0 to move at 3 million times the speed of light (default), and press 1-5 to fly to a random star.
+
+## Screenshots
+
 ![4K stars rendered in Godot Engine](screenshots/4k.png)
+
+Approaching a red star, still rendered by the starfield only:
 
 ![4K far red star rendered in Godot Engine](screenshots/4k_star_far.png)
 
+Getting close to a red star and the sphere mesh is visible:
+
 ![4K close red star rendered in Godot Engine](screenshots/4k_star_close.png)
+
